@@ -18,6 +18,7 @@ pip install -e .
   <img width="800px" height="auto" src="docs/images/web.gif"></a>
 </div>
 
+在终端中执行如下命令即可启动：
 ```commandline
 cd web
 python run.py
@@ -67,3 +68,8 @@ python run.py
 48 49 50 51 52 53 54 55
 56 57 58 59 60 61 62 63
 ```
+
+## 贡献者
+
+- [x] [黄世宇](https://huangshiyu13.github.io/)
+- [x] [陈俊哲](https://github.com/chenjz20Thu)
