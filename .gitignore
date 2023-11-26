@@ -163,4 +163,5 @@ cython_debug/
 
 /qq_game/images/screenshot.png
 /qq_game/saved_board.png
-reversi_tool/agents/config/gpt4.json
+/reversi_tool/agents/config/gpt4.json
+
