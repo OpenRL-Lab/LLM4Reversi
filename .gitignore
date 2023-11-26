@@ -62,7 +62,6 @@ db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
-instance/
 .webassets-cache
 
 # Scrapy stuff:
@@ -157,4 +156,11 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
+/qq_game/images/badcase.png
+/qq_game/screenshot*
+/qq_game/screenshot.png
+
+/qq_game/images/screenshot.png
+/qq_game/saved_board.png
+#reversi_tool/agents/config/gpt4.json

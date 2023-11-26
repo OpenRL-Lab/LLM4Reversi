@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=540,user-scalable=no">
+    <meta name="description" content="Othello, Reversi, AI"/>
+    <meta name="keywords" content="黑白棋, Othello, Reversi, AI"/>
+    <title>Reversi</title>
+    {{ JSGlue.include() }}
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'reversi_app/css/board.css') }}">
+</head>
+
+<!--Flask.url_for('reversi.get_action')-->
+
+<body>
+<div id="desk">
+    <div id="title">
+        <h1>Reversi</h1>
+    </div>
+
+    <div id="interface">
+        <div id="chessboard"></div>
+        <div id="pass"></div>
+        <div id="airuning">请下棋...</div>
+        <div id="serverruning">大模型思考中...</div>
+        <div id="selectbox">
+            <label><input type="radio" name="side" checked="checked"><span>Server AI First</span></label>
+            <label><input type="radio" name="side"><span>Local AI First</span></label><br/>
+            <label><input type="radio" name="level" checked="checked"><span>level 1: 0.02 sec/step</span></label><br/>
+            <label><input type="radio" name="level"><span>level 2: 0.1 sec/step</span></label><br/>
+            <label><input type="radio" name="level"><span>level 3: 0.5 sec/step</span></label><br/>
+            <label><input type="radio" name="level"><span>level 4: 2 sec/step</span></label><br/>
+            <label><input type="radio" name="level"><span>level 5: 5 sec/step</span></label><br/>
+            <label><input type="radio" name="level"><span>level 6: 10 sec/step</span></label><br/>
+            <label><input type="radio" name="level"><span>level 7: 20 sec/step</span></label><br/>
+            <div id="buttons">
+                <div id="ok" class="button_confirm">Go!</div>
+                <div id="cancel" class="button">Cancel</div>
+            </div>
+        </div>
+
+    </div>
+    <div id="console">
+        <div id="side1" class="cbox">
+            <span>0</span>
+            <div class="black"></div>
+        </div>
+        <div id="side2" class="cbox">
+            <span>0</span>
+            <div class="white"></div>
+        </div>
+        <div id="start" class="button">开始</div>
+        <!--        <div id="back" class="button">Undo</div>-->
+        <!--        <div id="no3d" class="button">3D</div>-->
+        <!--        <div id="explain" class="button">More</div>-->
+        <!--        <div id="test" class="button">Test</div>-->
+    </div>
+    <!--    <div id="copyright">Source Code:<a href="https://github.com/OpenRL-Lab/LLM4Reversi">Github</a></div>-->
+</div>
+
+<script type="text/javascript" src="{{ url_for('static',filename = 'reversi_app/js/board.js') }}"></script>
+<script type="text/javascript"
+        src="{{ url_for('static',filename='neko-framework/js/jquery/jquery-1.10.2.min.js')}}"></script>
+<!--<script>-->
+<!--    document.getElementById("test").onclick = function () {-->
+<!--        return-->
+
+<!--        var json_data = {'board': m, 'nexts': m.nextIndex};-->
+<!--        json_data = JSON.stringify(json_data)-->
+<!--        var action = -1-->
+<!--        $.ajax({-->
+<!--            type: 'POST',-->
+
+<!--            url: Flask.url_for('reversi_app.get_action1'),-->
+<!--            data: json_data,-->
+<!--            contentType: 'application/json',-->
+<!--            dataType: 'json',-->
+<!--            async: false,-->
+<!--            success: function (data) {-->
+<!--                console.log(data);-->
+<!--                action = data['action'];-->
+<!--            },-->
+<!--            error: function (err) {-->
+<!--                console.log(err.status + '(' + err.statusText + ')');-->
+<!--                action = m.nextIndex[Math.random() * m.nextIndex.length >> 0];-->
+<!--            }-->
+
+<!--        })-->
+<!--        console.log(action);-->
+<!--    };-->
+<!--</script>-->
+
+</body>
+</html>
