@@ -1,6 +1,6 @@
 # LLM4Reversi
 
-[知乎](https://zhuanlan.zhihu.com/p/668878505) | [Bilibili](./)
+[知乎](https://zhuanlan.zhihu.com/p/668878505) | [Bilibili](https://www.bilibili.com/video/BV1cC4y1y7HC/)
 
 ## 安装
 
